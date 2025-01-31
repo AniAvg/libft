@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anavagya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/27 11:40:48 by anavagya          #+#    #+#             */
-/*   Updated: 2025/01/29 18:22:35 by anavagya         ###   ########.fr       */
+/*   Created: 2025/01/31 16:33:17 by anavagya          #+#    #+#             */
+/*   Updated: 2025/01/31 16:35:24 by anavagya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*p;
-
-	p = (char *)s;
-	while (*p && *p != (char)c)
-		p++;
-	if (*p == (char)c)
-		return (p);
-	return (NULL);
+	write(fd, &c, 1);
 }
